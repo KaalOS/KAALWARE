@@ -6,4 +6,4 @@ RUN apt-get install -y nodejs
 RUN npm install i -g npm
 WORKDIR /app/
 COPY . /app/
-CMD node server.js
+CMD ./node_modules/.bin/forever -m 5 index.js
